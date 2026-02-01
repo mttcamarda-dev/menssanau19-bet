@@ -18,21 +18,6 @@ function PlayerCard({ player, onAddBet }) {
         </div>
       </div>
 
-      <div className="player-stats">
-        <div className="stat">
-          <span className="stat-value">{player.stats.avgPoints}</span>
-          <span className="stat-label">PPG</span>
-        </div>
-        <div className="stat">
-          <span className="stat-value">{player.stats.avgAssists}</span>
-          <span className="stat-label">APG</span>
-        </div>
-        <div className="stat">
-          <span className="stat-value">{player.stats.avgRebounds}</span>
-          <span className="stat-label">RPG</span>
-        </div>
-      </div>
-
       <div className="bet-categories">
         {Object.entries(betCategories).map(([key, { label, icon }]) => (
           <div key={key} className="bet-category">

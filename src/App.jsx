@@ -5,6 +5,7 @@ import PlayerCard from "./components/PlayerCard";
 import TeamBets from "./components/TeamBets";
 import Betslip from "./components/Betslip";
 import BetHistory from "./components/BetHistory";
+import InstallTutorial from "./components/InstallTutorial";
 import { players } from "./data/players";
 
 const INITIAL_BALANCE = 1000;
@@ -33,6 +34,9 @@ function App() {
   const [showHistory, setShowHistory] = useState(false);
   const [activeTab, setActiveTab] = useState("players");
   const [notification, setNotification] = useState(null);
+  const [showTutorial, setShowTutorial] = useState(() => {
+    return !localStorage.getItem("tutorialSeen");
+  });
 
   useEffect(() => {
     localStorage.setItem(
@@ -153,6 +157,10 @@ function App() {
 
       {showHistory && (
         <BetHistory history={history} onClose={() => setShowHistory(false)} />
+      )}
+
+      {showTutorial && (
+        <InstallTutorial onClose={() => setShowTutorial(false)} />
       )}
     </div>
   );

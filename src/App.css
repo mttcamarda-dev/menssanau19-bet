@@ -877,3 +877,156 @@ body {
     gap: 0.5rem;
   }
 }
+
+/* Install Tutorial */
+.tutorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 1rem;
+}
+
+.tutorial-modal {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--primary);
+}
+
+.tutorial-header {
+  margin-bottom: 1.5rem;
+}
+
+.tutorial-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tutorial-header h2 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.tutorial-text {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.tutorial-question {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tutorial-btn.iphone {
+  background: linear-gradient(135deg, #333, #000);
+  color: white;
+}
+
+.tutorial-btn.android {
+  background: linear-gradient(135deg, #3ddc84, #2da65a);
+  color: white;
+}
+
+.tutorial-btn.back {
+  background: var(--surface-light);
+  color: var(--text);
+}
+
+.tutorial-btn.done {
+  background: linear-gradient(135deg, var(--accent), #27ae60);
+  color: white;
+}
+
+.tutorial-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tutorial-skip {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-decoration: underline;
+}
+
+.tutorial-skip:hover {
+  color: var(--text);
+}
+
+.tutorial-steps {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.tutorial-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--surface-light);
+  border-radius: var(--border-radius);
+}
+
+.step-number {
+  background: var(--secondary);
+  color: var(--primary-dark);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tutorial-step p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.tutorial-note {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid var(--secondary);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
